@@ -73,8 +73,9 @@ import { Car, cars as cars_list } from './cars';
   // it should be filterable by make with a query paramater
   app.get( "/cars/", ( req: Request, res: Response ) => {
       // destruct our query paramaters
-      let { make } = req.query;
+      let { make } = req.body;
 
+      console.log("cars"+ req)
       
       let cars_list = cars;
 
